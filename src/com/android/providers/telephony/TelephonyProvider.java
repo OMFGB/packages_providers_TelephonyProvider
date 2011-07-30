@@ -351,8 +351,8 @@ public class TelephonyProvider extends ContentProvider
 
             case URL_CURRENT: {
                 qb.appendWhere("current IS NOT NULL");
-                // do not ignore the selection since MMS may use it.
-                //selection = null;
+                // ignore the selection
+                selection = null;
                 break;
             }
 
